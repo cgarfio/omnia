@@ -9,6 +9,8 @@ edition.workspace = true
 rust-version.workspace = true
 
 [dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
+clap = { workspace = true, features = ["derive", "env"] }
 
 [lints]
 workspace = true
@@ -26,6 +28,9 @@ edition = "2024"
 rust-version = "1.92.0"
 
 [workspace.dependencies]
+clap = "4.5.54"
+serde = "1.0.228"
+tokio = "1.49.0"
 
 [workspace.lints.rust]
 dead-code = "warn"
