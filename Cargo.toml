@@ -1,0 +1,57 @@
+# ==================================================
+# Package
+# ==================================================
+[package]
+name = "omnia"
+version = "0.1.0"
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+
+[lints]
+workspace = true
+
+# ==================================================
+# Workspace
+# ==================================================
+[workspace]
+members = ["."]
+resolver = "3"
+
+[workspace.package]
+authors = ["Carlos Danie Garfio Murillo <cgarfiomurillo@outlook.com>"]
+edition = "2024"
+rust-version = "1.92.0"
+
+[workspace.dependencies]
+
+[workspace.lints.rust]
+dead-code = "warn"
+# unsafe-code = "forbid"
+unused-imports = "warn"
+unused-variables = "warn"
+
+[workspace.lints.clippy]
+all = { level = "deny", priority = -1 }
+missing-safety-doc = "deny"
+needless-collect = "deny"
+panic = "deny"
+print-stderr = "deny"
+print-stdout = "deny"
+redundant-clone = "deny"
+redundant-closure = "deny"
+todo = "deny"
+undocumented-unsafe-blocks = "deny"
+unimplemented = "deny"
+unwrap-used = "deny"
+
+complexity = { level = "warn", priority = -1 }
+doc-markdown = "warn"
+float-cmp = "warn"
+non-ascii-literal = "warn"
+style = { level = "warn", priority = -1 }
+too-many-arguments = "warn"
+too-many-lines = "warn"
+type-complexity = "warn"
